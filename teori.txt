@@ -1,0 +1,35 @@
+1. Kan du förklara skillnaden mellan synkron och asynkron kod i Node.js?
+
+    Async är multi-thread, vilket innebär att operationer eller program kan köras parallellt. 
+    Synkronisering är en enkel tråd, så endast en operation eller ett program körs åt gången
+
+
+2. Beskriv användningen av middleware i Express och ge exempel på några vanliga
+middleware.
+
+    Den är en funktion som har tillgång till request och response objekt, den kan utföra autentisering,
+    manipulera frågor och svar, etc. Några exempel är multer och node-notifier, multer hanterar
+    encryption type för filuppladning och node notifier gör något liknande alert() i base js.
+
+
+3. Vilka fördelar erbjuder Prisma när det gäller att interagera med databasen?
+
+    Prisma först och främst erbjuder enkel syntax och autogenerad kod. De har enkel förståelig
+    dokumentation. De har bra säkerhet (emot SQL injections) och stöd för många olika databaser.
+    Allt detta gör att man sparar tid och har det enklare när man jobbar med databaser.
+
+4. Hur definierar du en modell för en tabell i Prisma?
+
+    Enkel exempel i schema.prisma: 
+
+    model User {
+        id    Int      @id @default(autoincrement())
+        name  String
+        email String   @unique
+    }
+
+5. Vad är skillnaden mellan npm install och npm install --save?
+
+    npm install > Helt enkelt installerar paket som är listade i package.json (t.ex multer)
+
+    npm install --save > Den gör samma sak men placerar den under dependencies

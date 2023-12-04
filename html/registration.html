@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <form action="/registration" method="post">
+        <label for="username">Användarnamn: </label>
+        <input type="text" name="username" id="username" required>
+
+        <label for="password">Lösenord: </label>
+        <input type="password" name="password" id="password" required>
+
+        <label for="role">Användare </label>
+        <input type="radio" name="role" id="user" value="user">
+
+        <label for="role">Admin</label>
+        <input type="radio" name="role" id="admin" value="admin">
+
+        <input type="submit" name="create" value="Skapa">
+    </form>
+</body>
+</html>
